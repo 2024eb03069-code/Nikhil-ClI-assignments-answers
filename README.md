@@ -27,13 +27,13 @@ Command: pwd and ls -l
 To verify the content, I used the **cat** command to display the file contents.
 
 Command: **echo "Linux user environment verified" > user_info.txt**
-<img width="1088" height="686" alt="Screenshot (629)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%201/3.png" /> 
+<img width="1088" height="686" alt="Screenshot (629)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%201/4(i).png" /> 
 
 4. File Integrity Check:
  To determine the total number of characters in the file, I used the **wc -m** command. The output confirmed that the file contains 32 characters.
 
 Command: **wc -m user_info.txt**
-<img width="1065" height="677" alt="Screenshot (640)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%201/4(i).png" />
+
 <img width="1065" height="677" alt="Screenshot (640)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%201/4(ii).png" />
 
 5. Learning the Tools:
