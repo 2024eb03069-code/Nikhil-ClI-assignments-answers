@@ -84,10 +84,13 @@ Number of users: Currently logged-in users
 <h2>Question 2</h2>
 You are working as a junior system administrator responsible for organizing project-related files in your home directory.
 Your supervisor wants you to demonstrate your understanding of Linux file and directory management commands.
+
+
 1. Project Workspace Setup: 
 ```bash
 mkdir documents
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%202/1.png" />
 
 ### Task 2: File Creation
