@@ -17,7 +17,7 @@ Command: **whoami** and **id**
 I am using the **clear** command after each question so that the commands looking clean.
 
 2. Workspace Validation:
- I used the **pwd** command to display the current working directory. To view all files and folders present in that directory with detailed information such as permissions, ownership, and file size, I executed the **ls -l** command.
+ I used the **pwd** command  to display the current working directory. To view all files and folders present in that directory with detailed information such as permissions, ownership, and file size, I executed the **ls -l** command.
 
 Command: pwd and ls -l
 <img width="1122" height="716" alt="Screenshot (626)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%201/2.png" />
