@@ -125,80 +125,105 @@ cd ..
 mv documents project_documents
 ```
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%202/6.png" />
+
 ### Task 7: Archival Structure
 ```bash
 mkdir project_documents/archive
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%202/7.png" />
 
 ### Task 8: File Organization
+
 ```bash
 mv project_documents/plan_copy.txt project_documents/archive/
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%202/8.png" />
 
 ### Task 9: Recursive Listing
+
 ```bash
 ls -R project_documents
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%202/9.png" />
+
 **Explanation:** Displays directory tree showing all subdirectories and files recursively.
 
 ### Task 10: Path Verification
+
 ```bash
 readlink -f project_documents/archive/plan_copy.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%202/10.png" />
+
 **Explanation:** Shows the full absolute path of the file, resolving any symbolic links.
 
 ---
 
 ## QUESTION 3: Links & Disk Usage (10 Tasks - 5 Points)
 
-Navigate to Question_3 folder and execute:
+
 
 ### Task 1: File Creation
 ```bash
 echo "Sample data content" > sample_data.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/1.png" />
 
 
 ### Task 2: Hard Link Creation
+
 ```bash
 ln sample_data.txt sample_hard.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/2.png" />
 
 ### Task 3: Symbolic Link Creation
+
 ```bash
 ln -s sample_data.txt sample_soft.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/3.png" />
 
 ### Task 4: Inode Verification
 ```bash
 ls -i sample_data.txt sample_hard.txt sample_soft.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/4.png" />
+
 **Explanation:** Shows inode numbers - hard link shares same inode, symbolic link has different inode.
 
 ### Task 5: Inode Analysis
+
 **Explanation:** The hard link (sample_hard.txt) and original file (sample_data.txt) share the same inode number because they point to the same data block. The symbolic link has a different inode as it's a separate file containing just the path reference.
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/5.png" />
 
 ### Task 6: File Metadata Inspection
+
 ```bash
 stat sample_data.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/6.png" />
+
 **Explanation:** Displays detailed file information including inode, permissions, size, access/modify times, and more.
 
 ### Task 7: Disk Usage Check
+
 ```bash
 du -h ~
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/7.png" />
+
 **Explanation:** Shows disk usage summary of home directory in human-readable format (KB, MB, GB).
 
 ### Task 8: File Size Overview
@@ -209,26 +234,32 @@ ls -lh ~
 **Explanation:** Lists home directory files with sizes in human-readable format.
 
 ### Task 9: Link Deletion Test
+
 ```bash
 rm sample_soft.txt
 ls sample_data.txt
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/9.png" />
+
 **Explanation:** Removing symbolic link doesn't affect the original file. Removing hard link decrements link count but preserves data if other links exist.
 
 ### Task 10: Disk Utility Demonstration
+
 ```bash
 du -sh ~/*
 df -h
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%203/10.png" />
+
 **Explanation:** Shows disk usage summary for each item in home directory and filesystem disk space utilization in human format.
 
 ---
 
 ## QUESTION 4: System Monitoring (10 Tasks - 5 Points)
 
-Navigate to Question_4 folder and execute:
+
 
 ### Task 1: System Uptime Verification
 ```bash
@@ -240,7 +271,9 @@ uptime
 ```bash
 ps aux --user=$USER
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/2.png" />
+
 **Explanation:** Lists all processes running under current user account with detailed information.
 
 ### Task 3: CPU Usage Analysis
@@ -248,17 +281,22 @@ ps aux --user=$USER
 ps aux --user=$USER --sort=-%cpu | head -5
 ```
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/3.png" />
+
 **Explanation:** Shows top 5 processes consuming most CPU resources, sorted by %CPU usage.
 
 ### Task 4: Background Process Execution
+
 ```bash
 sleep 300 &
 jobs
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/4.png" />
+
 **Explanation:** Starts background process (300 second sleep) and lists active background jobs.
 
 ### Task 5: Process Priority Management
+
 ```bash
 renice +5 -p <PID>
 ps -p <PID> -o pid,ni,cmd
@@ -268,39 +306,51 @@ ps -p <PID> -o pid,ni,cmd
 **Explanation:** Changes process priority (nice value) and displays the modified process with new priority level.
 
 ### Task 6: Memory Usage Monitoring
+
 ```bash
 free -h
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/6.png" />
+
 **Explanation:** Displays memory usage statistics in human-readable format showing total, used, free, and cache memory.
 
 ### Task 7: Disk Space Inspection
+
 ```bash
 df -h /home
 ```
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/7.png" />
+
 **Explanation:** Shows disk space usage for /home filesystem including total, used, available space, and usage percentage.
 
 ### Task 8: Shell Identification
+
 ```bash
 echo $SHELL
 ```
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/8.png" />
+
 **Explanation:** Displays the current user's login shell (usually /bin/bash or /bin/zsh on macOS).
 
 ### Task 9: Output Redirection
+
 ```bash
 uname -a > system_report.txt
 cat system_report.txt
 ```
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/9.png" />
+
 **Explanation:** Redirects system information output to file, then displays file contents to verify redirection worked.
 
 ### Task 10: Disk Usage Visualization
+
 ```bash
 du -sh ~/* | sort -hr
 ```
+
 <img width="1058" height="667" alt="Screenshot (638)" src="https://github.com/2024eb03069-code/Nikhil-ClI-assignments-answers/blob/main/images/Qno%204/10.png" />
+
 **Explanation:** Shows disk usage for each directory in home, sorted by size in descending order.
 
 ---
